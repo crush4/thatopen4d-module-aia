@@ -1,8 +1,24 @@
 {
   "schemaVersion": 1,
   "pluginId": "thatopen4d-aia",
-  "generatedAt": "2026-07-02T00:08:26.073Z",
+  "generatedAt": "2026-07-02T11:22:15.526Z",
   "versions": [
+    {
+      "version": "1.0.1",
+      "publishedAt": "2026-07-02T12:00:00.000Z",
+      "entries": [
+        {
+          "id": "process-env-fix",
+          "type": "fix",
+          "title": "process.env.NODE_ENV im Plugin-Bundle stubben",
+          "body": "Third-Party-Libraries (TanStack, React-Interna in Prod-Mode) pruefen\n`process.env.NODE_ENV` synchron beim Modul-Init. Im v1.0.0-Bundle war\ndas nicht via `define` gestubbt, wodurch das Panel beim Render mit\n`ReferenceError: process is not defined` crashte.",
+          "audience": [
+            "user"
+          ],
+          "breaking": false
+        }
+      ]
+    },
     {
       "version": "1.0.0",
       "publishedAt": "2026-06-22T12:00:00.000Z",

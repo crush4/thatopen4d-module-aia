@@ -68,6 +68,10 @@ export default defineConfig({
   // URL-Konfiguration im Plugin-Loader und stellt sicher, dass die
   // panel.css genau dann da ist, wenn das Plugin aktiv ist.
   plugins: [react(), hostExternalsPlugin(), cssInjectedByJsPlugin()],
+  // Node-Globals stubben — sonst crashen Libraries wie TanStack in Prod-Mode.
+  define: {
+    "process.env.NODE_ENV": JSON.stringify("production"),
+  },
   build: {
     lib: {
       entry: "src/register.ts",

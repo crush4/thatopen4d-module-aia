@@ -11,7 +11,7 @@ import { ModulePanel as xd, ModulePanelHeader as Vd, appIcons as Id, ModulePanel
 import { getSurvey as wt, putSurvey as xt, listResponses as Yt, listStammdaten as Os, listDeliverables as Pd, createDeliverable as Rd, updateDeliverable as Td, deleteDeliverable as Ad, listStandards as Ld, createStandard as Dd, updateStandard as Od, deleteStandard as Md, listSurveys as kd, createStammdatenEntry as Rs, upsertResponse as Wt } from "@thatopen4d/api-clients/aia";
 import { listTwinClasses as Nd } from "@thatopen4d/api-clients/twin-classes";
 import { ApiError as Vt } from "@thatopen4d/api-clients/client";
-const qd = { id: "thatopen4d-aia", displayName: "AIA", version: "1.0.0", engines: { host: "^1.5.1" } }, Bd = {
+const qd = { id: "thatopen4d-aia", displayName: "AIA", version: "1.0.1", engines: { host: "^1.5.1" } }, Bd = {
   thatopen4d: qd
 };
 class U {

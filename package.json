@@ -1,13 +1,13 @@
 {
   "name": "@thatopen4d/module-aia",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "ThatOpen4D Stage-1-Plugin: AIA — Auftraggeber-Informations-Anforderungen mit Survey-basierten Kacheln fuer Stammdaten, Projekt-Profile, Leistungen und Standards.",
   "type": "module",
   "thatopen4d": {
     "id": "thatopen4d-aia",
     "displayName": "AIA",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "engines": {
       "host": "^1.5.1"
     },

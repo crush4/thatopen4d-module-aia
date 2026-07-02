@@ -1,0 +1,137 @@
+{
+  "title": {
+    "de": "LOD/LOI-Katalog",
+    "en": "LOD/LOI catalog"
+  },
+  "description": {
+    "de": "Katalog der geometrischen Detaillierungsstufen (LOD) und alphanumerischen Informationsstufen (LOI). Dient als Referenz für LOIN-Zuordnungen pro TwinClass — wird in Sprint 2 pro IFC-Klasse mit Milestones verknüpft.",
+    "en": "Catalog of geometric Level of Development (LOD) and alphanumeric Level of Information (LOI). Reference for per-TwinClass LOIN assignments in Sprint 2."
+  },
+  "showProgressBar": "off",
+  "completeText": {
+    "de": "Speichern",
+    "en": "Save"
+  },
+  "completedHtml": {
+    "de": "<h3>LOD/LOI-Katalog gespeichert.</h3>",
+    "en": "<h3>LOD/LOI catalog saved.</h3>"
+  },
+  "pages": [
+    {
+      "name": "lod",
+      "title": {
+        "de": "Level of Development (LOD)",
+        "en": "Level of Development (LOD)"
+      },
+      "elements": [
+        {
+          "type": "matrixdynamic",
+          "name": "lods",
+          "title": {
+            "de": "Geometrische LOD-Stufen",
+            "en": "Geometric LOD levels"
+          },
+          "description": {
+            "de": "Typische Stufen: 100 (symbolisch), 200 (generisch), 300 (präzise), 350 (verbunden), 400 (fabrikationsfähig), 500 (as-built).",
+            "en": "Typical levels: 100 (symbolic), 200 (generic), 300 (precise), 350 (coordinated), 400 (fabrication), 500 (as-built)."
+          },
+          "columns": [
+            {
+              "name": "code",
+              "title": {
+                "de": "Code",
+                "en": "Code"
+              },
+              "cellType": "text",
+              "isRequired": true
+            },
+            {
+              "name": "label",
+              "title": {
+                "de": "Bezeichnung",
+                "en": "Label"
+              },
+              "cellType": "text",
+              "isRequired": true
+            },
+            {
+              "name": "description",
+              "title": {
+                "de": "Beschreibung",
+                "en": "Description"
+              },
+              "cellType": "comment"
+            }
+          ],
+          "rowCount": 0,
+          "addRowText": {
+            "de": "LOD hinzufügen",
+            "en": "Add LOD"
+          },
+          "emptyRowsText": {
+            "de": "Noch keine LOD-Stufen. Füge den ersten Eintrag hinzu.",
+            "en": "No LOD levels yet. Add the first entry."
+          }
+        }
+      ]
+    },
+    {
+      "name": "loi",
+      "title": {
+        "de": "Level of Information (LOI)",
+        "en": "Level of Information (LOI)"
+      },
+      "elements": [
+        {
+          "type": "matrixdynamic",
+          "name": "lois",
+          "title": {
+            "de": "Alphanumerische LOI-Stufen",
+            "en": "Alphanumeric LOI levels"
+          },
+          "description": {
+            "de": "Welche Attribute müssen pro Stufe verfügbar sein? Attribute als kommaseparierte Liste oder Freitext.",
+            "en": "Which attributes must be available per level? Attributes as comma-separated list or free text."
+          },
+          "columns": [
+            {
+              "name": "code",
+              "title": {
+                "de": "Code",
+                "en": "Code"
+              },
+              "cellType": "text",
+              "isRequired": true
+            },
+            {
+              "name": "label",
+              "title": {
+                "de": "Bezeichnung",
+                "en": "Label"
+              },
+              "cellType": "text",
+              "isRequired": true
+            },
+            {
+              "name": "attributes",
+              "title": {
+                "de": "Attribute",
+                "en": "Attributes"
+              },
+              "cellType": "comment"
+            }
+          ],
+          "rowCount": 0,
+          "addRowText": {
+            "de": "LOI hinzufügen",
+            "en": "Add LOI"
+          },
+          "emptyRowsText": {
+            "de": "Noch keine LOI-Stufen. Füge den ersten Eintrag hinzu.",
+            "en": "No LOI levels yet. Add the first entry."
+          }
+        }
+      ]
+    }
+  ]
+}

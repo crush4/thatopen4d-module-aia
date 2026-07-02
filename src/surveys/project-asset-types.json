@@ -1,0 +1,90 @@
+{
+  "title": {
+    "de": "Asset-Type hinzufügen",
+    "en": "Add asset type"
+  },
+  "description": {
+    "de": "Deliverable-Kategorie (dotBEP `assetType`). Beispiele: M3D (3D-Modell), RPT (Bericht), DWG (2D-Zeichnung).",
+    "en": "Deliverable category (dotBEP `assetType`). Examples: M3D (3D model), RPT (report), DWG (2D drawing)."
+  },
+  "showProgressBar": "off",
+  "completeText": {
+    "de": "Asset-Type anlegen",
+    "en": "Create asset type"
+  },
+  "completedHtml": {
+    "de": "<h3>Asset-Type angelegt.</h3>",
+    "en": "<h3>Asset type created.</h3>"
+  },
+  "pages": [
+    {
+      "name": "assetType",
+      "title": {
+        "de": "Asset-Type",
+        "en": "Asset type"
+      },
+      "elements": [
+        {
+          "type": "text",
+          "name": "label",
+          "title": {
+            "de": "Bezeichnung",
+            "en": "Label"
+          },
+          "description": {
+            "de": "Lesbare Bezeichnung (z. B. '3D-Modell', 'Bericht').",
+            "en": "Human-readable label (e.g. '3D model', 'Report')."
+          },
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "code",
+          "title": {
+            "de": "Kurzcode",
+            "en": "Code"
+          },
+          "description": {
+            "de": "2–4 Zeichen, Großbuchstaben/Ziffern. Für Deliverable-Nomenklatur. Beispiel: M3D, RPT.",
+            "en": "2–4 characters, uppercase/digits. For deliverable naming. Example: M3D, RPT."
+          },
+          "isRequired": true,
+          "validators": [
+            {
+              "type": "regex",
+              "regex": "^[A-Z0-9]{2,4}$",
+              "text": {
+                "de": "Nur Großbuchstaben und Ziffern erlaubt. 2–4 Zeichen.",
+                "en": "Only uppercase letters and digits allowed. 2–4 characters."
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "allowedExtensions",
+          "title": {
+            "de": "Erlaubte Dateiendungen",
+            "en": "Allowed file extensions"
+          },
+          "description": {
+            "de": "Kommaseparierte Liste inkl. Punkt. Beispiel: .ifc, .rvt, .nwd",
+            "en": "Comma-separated list including dot. Example: .ifc, .rvt, .nwd"
+          }
+        },
+        {
+          "type": "comment",
+          "name": "description",
+          "title": {
+            "de": "Beschreibung",
+            "en": "Description"
+          },
+          "description": {
+            "de": "Optional: längere Erklärung, wofür dieser Asset-Type steht.",
+            "en": "Optional: longer description of what this asset type covers."
+          }
+        }
+      ]
+    }
+  ]
+}

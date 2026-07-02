@@ -1,0 +1,107 @@
+{
+  "title": {
+    "de": "LOIN-Anforderungen",
+    "en": "LOIN requirements"
+  },
+  "description": {
+    "de": "Level of Information Need pro Milestone für diese TwinClass. Jede Zeile ist eine Property-Anforderung: was muss bis zu welchem Milestone mit welcher Geometrie (LOD) und welchen Attributen (LOI) vorliegen?",
+    "en": "Level of Information Need per milestone for this TwinClass. Each row is a property requirement: what must be available by which milestone with which geometry (LOD) and attributes (LOI)?"
+  },
+  "showProgressBar": "off",
+  "completeText": {
+    "de": "Speichern",
+    "en": "Save"
+  },
+  "completedHtml": {
+    "de": "<h3>LOIN-Anforderungen gespeichert.</h3>",
+    "en": "<h3>LOIN requirements saved.</h3>"
+  },
+  "pages": [
+    {
+      "name": "requirements",
+      "title": {
+        "de": "Anforderungen",
+        "en": "Requirements"
+      },
+      "elements": [
+        {
+          "type": "matrixdynamic",
+          "name": "requirements",
+          "title": {
+            "de": "Informationsanforderungen",
+            "en": "Information requirements"
+          },
+          "description": {
+            "de": "Je Zeile eine Anforderung. Milestone, LOD und LOI werden aus den Projekt-Katalogen (Sprint-1-Surveys) gezogen.",
+            "en": "One requirement per row. Milestone, LOD and LOI are sourced from the project catalogs (Sprint-1 surveys)."
+          },
+          "columns": [
+            {
+              "name": "milestone",
+              "title": {
+                "de": "Milestone",
+                "en": "Milestone"
+              },
+              "cellType": "dropdown",
+              "isRequired": true
+            },
+            {
+              "name": "property",
+              "title": {
+                "de": "Property",
+                "en": "Property"
+              },
+              "cellType": "text",
+              "isRequired": true,
+              "description": {
+                "de": "Bezeichnung der geforderten Eigenschaft (z. B. 'Dicke', 'Hersteller', 'U-Wert').",
+                "en": "Name of the required property (e.g. 'Thickness', 'Manufacturer', 'U-value')."
+              }
+            },
+            {
+              "name": "lodCode",
+              "title": {
+                "de": "LOD",
+                "en": "LOD"
+              },
+              "cellType": "dropdown"
+            },
+            {
+              "name": "loiCode",
+              "title": {
+                "de": "LOI",
+                "en": "LOI"
+              },
+              "cellType": "dropdown"
+            },
+            {
+              "name": "responsibleTeamId",
+              "title": {
+                "de": "Zuständig",
+                "en": "Responsible"
+              },
+              "cellType": "dropdown"
+            },
+            {
+              "name": "notes",
+              "title": {
+                "de": "Notiz",
+                "en": "Notes"
+              },
+              "cellType": "comment"
+            }
+          ],
+          "rowCount": 0,
+          "addRowText": {
+            "de": "Anforderung hinzufügen",
+            "en": "Add requirement"
+          },
+          "emptyRowsText": {
+            "de": "Noch keine LOIN-Anforderungen für diese Klasse. Füge die erste Zeile hinzu.",
+            "en": "No LOIN requirements yet for this class. Add the first row."
+          }
+        }
+      ]
+    }
+  ]
+}

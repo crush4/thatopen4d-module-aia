@@ -1,0 +1,104 @@
+{
+  "title": {
+    "de": "Projekt-Profil",
+    "en": "Project Profile"
+  },
+  "description": {
+    "de": "ISO-19650-konforme Projektidentifikation: Code, Kunde, Adresse, Kurzbeschreibung.",
+    "en": "ISO-19650-compliant project identification: code, client, address, short description."
+  },
+  "showProgressBar": "off",
+  "completeText": {
+    "de": "Speichern",
+    "en": "Save"
+  },
+  "completedHtml": {
+    "de": "<h3>Projekt-Profil gespeichert.</h3>",
+    "en": "<h3>Project profile saved.</h3>"
+  },
+  "pages": [
+    {
+      "name": "profile",
+      "title": {
+        "de": "Eckdaten",
+        "en": "Key facts"
+      },
+      "elements": [
+        {
+          "type": "text",
+          "name": "projectCode",
+          "title": {
+            "de": "Projekt-Code",
+            "en": "Project code"
+          },
+          "description": {
+            "de": "Kurzes Kürzel (2–6 Zeichen), wird in Deliverable-Namen verwendet. Beispiel: BF2, MLX.",
+            "en": "Short key (2–6 characters) used in deliverable naming. Example: BF2, MLX."
+          },
+          "isRequired": true,
+          "validators": [
+            {
+              "type": "regex",
+              "regex": "^[A-Za-z0-9_-]{2,6}$",
+              "text": {
+                "de": "Nur Buchstaben, Ziffern, _ und - erlaubt. 2–6 Zeichen.",
+                "en": "Only letters, digits, _ and - allowed. 2–6 characters."
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "projectName",
+          "title": {
+            "de": "Projektname",
+            "en": "Project name"
+          },
+          "description": {
+            "de": "Vollständiger Name, wie er in Dokumenten erscheinen soll.",
+            "en": "Full name as it should appear in documents."
+          },
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "clientName",
+          "title": {
+            "de": "Auftraggeber (Kunde)",
+            "en": "Client"
+          },
+          "description": {
+            "de": "Organisation oder Person, die das Projekt beauftragt hat.",
+            "en": "Organisation or person commissioning the project."
+          },
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "projectAddress",
+          "title": {
+            "de": "Projekt-Adresse",
+            "en": "Project address"
+          },
+          "description": {
+            "de": "Straße, PLZ, Stadt — wenn zutreffend.",
+            "en": "Street, postcode, city — if applicable."
+          }
+        },
+        {
+          "type": "comment",
+          "name": "projectDescription",
+          "title": {
+            "de": "Kurzbeschreibung",
+            "en": "Short description"
+          },
+          "description": {
+            "de": "2–3 Sätze, Zweck und Umfang des Projekts.",
+            "en": "2–3 sentences, purpose and scope of the project."
+          },
+          "rows": 4
+        }
+      ]
+    }
+  ]
+}

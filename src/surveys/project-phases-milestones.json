@@ -1,0 +1,231 @@
+{
+  "title": {
+    "de": "Phasen & Milestones",
+    "en": "Phases & Milestones"
+  },
+  "description": {
+    "de": "Projektphasen nach dotBEP-Konvention plus projektspezifische Milestones. Diese Struktur bildet die Grundlage für LOIN-Anforderungen pro Phase.",
+    "en": "Project phases per dotBEP convention plus project-specific milestones. This structure underpins LOIN requirements per phase."
+  },
+  "showProgressBar": "off",
+  "completeText": {
+    "de": "Speichern",
+    "en": "Save"
+  },
+  "completedHtml": {
+    "de": "<h3>Phasen & Milestones gespeichert.</h3>",
+    "en": "<h3>Phases & milestones saved.</h3>"
+  },
+  "pages": [
+    {
+      "name": "phases",
+      "title": {
+        "de": "Projektphasen",
+        "en": "Project phases"
+      },
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "activePhases",
+          "title": {
+            "de": "Aktive Phasen in diesem Projekt",
+            "en": "Active phases in this project"
+          },
+          "description": {
+            "de": "Welche Phasen sind für das Projekt relevant? Mehrfachauswahl.",
+            "en": "Which phases are relevant for the project? Multi-select."
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "pre-project",
+              "text": {
+                "de": "Bedarfsplanung (Pre-project)",
+                "en": "Pre-project"
+              }
+            },
+            {
+              "value": "conceptual",
+              "text": {
+                "de": "Konzept (Conceptual)",
+                "en": "Conceptual"
+              }
+            },
+            {
+              "value": "schematic",
+              "text": {
+                "de": "Vorplanung (Schematic)",
+                "en": "Schematic"
+              }
+            },
+            {
+              "value": "design-development",
+              "text": {
+                "de": "Entwurf (Design Development)",
+                "en": "Design Development"
+              }
+            },
+            {
+              "value": "construction-documentation",
+              "text": {
+                "de": "Ausführungsplanung (Construction Documentation)",
+                "en": "Construction Documentation"
+              }
+            },
+            {
+              "value": "construction",
+              "text": {
+                "de": "Ausführung (Construction)",
+                "en": "Construction"
+              }
+            },
+            {
+              "value": "handover",
+              "text": {
+                "de": "Übergabe (Handover)",
+                "en": "Handover"
+              }
+            },
+            {
+              "value": "operation",
+              "text": {
+                "de": "Betrieb (Operation)",
+                "en": "Operation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "milestones",
+      "title": {
+        "de": "Milestones",
+        "en": "Milestones"
+      },
+      "elements": [
+        {
+          "type": "matrixdynamic",
+          "name": "milestones",
+          "title": {
+            "de": "Projekt-Milestones",
+            "en": "Project milestones"
+          },
+          "description": {
+            "de": "Je Zeile ein Milestone mit Phase, Bezeichnung und optionalem Datum. Milestones verbinden später LOIN-Anforderungen mit Terminen.",
+            "en": "One milestone per row with phase, name, and optional date. Milestones later link LOIN requirements to dates."
+          },
+          "columns": [
+            {
+              "name": "phase",
+              "title": {
+                "de": "Phase",
+                "en": "Phase"
+              },
+              "cellType": "dropdown",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "pre-project",
+                  "text": {
+                    "de": "Bedarfsplanung",
+                    "en": "Pre-project"
+                  }
+                },
+                {
+                  "value": "conceptual",
+                  "text": {
+                    "de": "Konzept",
+                    "en": "Conceptual"
+                  }
+                },
+                {
+                  "value": "schematic",
+                  "text": {
+                    "de": "Vorplanung",
+                    "en": "Schematic"
+                  }
+                },
+                {
+                  "value": "design-development",
+                  "text": {
+                    "de": "Entwurf",
+                    "en": "Design Development"
+                  }
+                },
+                {
+                  "value": "construction-documentation",
+                  "text": {
+                    "de": "Ausführungsplanung",
+                    "en": "Construction Documentation"
+                  }
+                },
+                {
+                  "value": "construction",
+                  "text": {
+                    "de": "Ausführung",
+                    "en": "Construction"
+                  }
+                },
+                {
+                  "value": "handover",
+                  "text": {
+                    "de": "Übergabe",
+                    "en": "Handover"
+                  }
+                },
+                {
+                  "value": "operation",
+                  "text": {
+                    "de": "Betrieb",
+                    "en": "Operation"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "code",
+              "title": {
+                "de": "Kürzel",
+                "en": "Code"
+              },
+              "cellType": "text",
+              "description": {
+                "de": "Kurzcode (z. B. M1, GP-ABN). Für Deliverable-Nomenklatur.",
+                "en": "Short code (e.g. M1, GP-ABN). For deliverable naming."
+              },
+              "isRequired": true
+            },
+            {
+              "name": "name",
+              "title": {
+                "de": "Bezeichnung",
+                "en": "Name"
+              },
+              "cellType": "text",
+              "isRequired": true
+            },
+            {
+              "name": "date",
+              "title": {
+                "de": "Datum",
+                "en": "Date"
+              },
+              "cellType": "text",
+              "inputType": "date"
+            }
+          ],
+          "rowCount": 0,
+          "addRowText": {
+            "de": "Milestone hinzufügen",
+            "en": "Add milestone"
+          },
+          "emptyRowsText": {
+            "de": "Noch keine Milestones. Füge den ersten Eintrag hinzu.",
+            "en": "No milestones yet. Add the first entry."
+          }
+        }
+      ]
+    }
+  ]
+}

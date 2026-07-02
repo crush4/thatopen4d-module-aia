@@ -1,0 +1,17 @@
+{
+  "id": "thatopen4d-aia",
+  "displayName": "AIA",
+  "version": "1.0.0",
+  "engines": {
+    "host": "^1.5.1"
+  },
+  "contributes": {
+    "panels": [
+      {
+        "panelId": "aia",
+        "title": "AIA",
+        "icon": "mdi:clipboard-list-outline"
+      }
+    ]
+  }
+}

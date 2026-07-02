@@ -1,0 +1,91 @@
+/*
+ * SurveyJS-Theme-Overrides für das AIA-Panel.
+ *
+ * Wir mappen die SurveyJS-v2-CSS-Custom-Properties (`--sjs-*`) auf
+ * unsere `--bim-ui_*`-Tokens, damit das Survey optisch zur Haupt-App
+ * passt (dunkles Theme, grüner Akzent).
+ *
+ * Scoping: Die Overrides sind auf `.module-aia-survey-host` gebunden,
+ * damit sie nicht global andere SurveyJS-Instanzen färben, falls
+ * später weitere Module SurveyJS einbinden.
+ *
+ * CSS-Variable-Referenz: https://surveyjs.io/form-library/documentation/manage-default-themes-and-styles
+ */
+
+.module-aia-survey-host {
+  /* ── Grundfarben ────────────────────────────────────────────── */
+  --sjs-general-backcolor: var(--bim-ui_bg-contrast-10);
+  --sjs-general-backcolor-dark: var(--bim-ui_bg-contrast-20);
+  --sjs-general-backcolor-dim: var(--bim-ui_bg-base);
+  --sjs-general-backcolor-dim-light: var(--bim-ui_bg-contrast-10);
+  --sjs-general-backcolor-dim-dark: var(--bim-ui_bg-contrast-20);
+  --sjs-general-forecolor: var(--bim-ui_bg-contrast-80);
+  --sjs-general-forecolor-light: var(--bim-ui_bg-contrast-60);
+  --sjs-general-dim-forecolor: var(--bim-ui_bg-contrast-80);
+  --sjs-general-dim-forecolor-light: var(--bim-ui_bg-contrast-60);
+
+  /* ── Primärfarbe (Akzent, Speichern-Button, Progressbar) ────── */
+  --sjs-primary-backcolor: var(--bim-ui_main-base);
+  --sjs-primary-backcolor-light: color-mix(in srgb, var(--bim-ui_main-base) 15%, transparent);
+  --sjs-primary-backcolor-dark: var(--bim-ui_main-base);
+  --sjs-primary-forecolor: var(--bim-ui_bg-contrast-100);
+  --sjs-primary-forecolor-light: var(--bim-ui_bg-contrast-80);
+
+  /* ── Sekundär (Validierungs-Sterne, "Erforderlich") ────────── */
+  --sjs-secondary-backcolor: var(--bim-ui_accent-base, #e74c3c);
+  --sjs-secondary-forecolor: #fff;
+  --sjs-secondary-backcolor-light: rgba(231, 76, 60, 0.15);
+
+  /* ── Borders ────────────────────────────────────────────────── */
+  --sjs-border-default: var(--bim-ui_bg-contrast-20);
+  --sjs-border-light: var(--bim-ui_bg-contrast-10);
+  --sjs-border-inside: var(--bim-ui_bg-contrast-20);
+
+  /* ── Shadows (im Dark-Theme dezenter als default) ──────────── */
+  --sjs-shadow-small: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --sjs-shadow-medium: 0 2px 6px rgba(0, 0, 0, 0.4);
+  --sjs-shadow-large: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --sjs-shadow-inner: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+
+  /* ── Spezial-Farben für besondere Zustände ───────────────────── */
+  --sjs-special-red: var(--bim-ui_accent-red, #e74c3c);
+  --sjs-special-red-light: rgba(231, 76, 60, 0.15);
+  --sjs-special-green: var(--bim-ui_accent-green, #2ecc71);
+  --sjs-special-green-light: rgba(46, 204, 113, 0.15);
+  --sjs-special-blue: var(--bim-ui_accent-blue, #3498db);
+  --sjs-special-blue-light: rgba(52, 152, 219, 0.15);
+  --sjs-special-yellow: var(--bim-ui_accent-yellow, #f39c12);
+  --sjs-special-yellow-light: rgba(243, 156, 18, 0.15);
+
+  /* ── Question Titel (etwas kompakter als default) ──────────── */
+  --sjs-font-questiontitle-weight: 600;
+  --sjs-font-questiontitle-size: 0.9rem;
+
+  /* ── Corner-Radius — an App-Stil angleichen (wir nutzen 4px) ── */
+  --sjs-corner-radius: 4px;
+
+  /* ── Dropdown-Arrow-Farbe (Select-Pfeile) ──────────────────── */
+  --sjs-questionpanel-backcolor: var(--bim-ui_bg-contrast-10);
+  --sjs-questionpanel-hovercolor: var(--bim-ui_bg-contrast-20);
+  --sjs-editor-background: var(--bim-ui_bg-contrast-20);
+  --sjs-editor-background-disabled: var(--bim-ui_bg-contrast-10);
+}
+
+/* ── SurveyJS rendert einen weißen Rahmen, der im Dark-Mode stört ── */
+.module-aia-survey-host .sd-root-modern,
+.module-aia-survey-host .sd-container-modern {
+  background-color: transparent;
+}
+
+/* ── Completed-Page: weg mit dem dick-bold-Thank-you-Banner ──── */
+.module-aia-survey-host .sd-completedpage {
+  background-color: transparent;
+  padding: 1.5rem 1rem;
+  color: var(--bim-ui_bg-contrast-80);
+}
+
+.module-aia-survey-host .sd-completedpage h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--bim-ui_bg-contrast-80);
+}

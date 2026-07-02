@@ -1,0 +1,128 @@
+{
+  "title": {
+    "de": "Team hinzufügen",
+    "en": "Add team"
+  },
+  "description": {
+    "de": "Neue Team-Organisation zum Projekt hinzufügen. ISO-19650-konform: Auftraggeber, Generalplaner oder Fachplaner.",
+    "en": "Add a new team organisation to the project. ISO-19650-compliant: appointing party, lead appointed party, or appointed party."
+  },
+  "showProgressBar": "off",
+  "completeText": {
+    "de": "Team anlegen",
+    "en": "Create team"
+  },
+  "completedHtml": {
+    "de": "<h3>Team angelegt.</h3>",
+    "en": "<h3>Team created.</h3>"
+  },
+  "pages": [
+    {
+      "name": "team",
+      "title": {
+        "de": "Team-Daten",
+        "en": "Team details"
+      },
+      "elements": [
+        {
+          "type": "text",
+          "name": "name",
+          "title": {
+            "de": "Team-Name",
+            "en": "Team name"
+          },
+          "description": {
+            "de": "Voller Name der Organisation (z. B. 'Architekturbüro Müller GmbH').",
+            "en": "Full organisation name (e.g. 'Architecture Office Müller Ltd.')."
+          },
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "code",
+          "title": {
+            "de": "Team-Code",
+            "en": "Team code"
+          },
+          "description": {
+            "de": "Kurzkennung (2–6 Zeichen, Großbuchstaben/Ziffern) für Deliverable-Namen. Beispiel: ARC, STR, MEP.",
+            "en": "Short key (2–6 characters, uppercase/digits) for deliverable names. Example: ARC, STR, MEP."
+          },
+          "isRequired": true,
+          "validators": [
+            {
+              "type": "regex",
+              "regex": "^[A-Z0-9_-]{2,6}$",
+              "text": {
+                "de": "Nur Großbuchstaben, Ziffern, _ und - erlaubt. 2–6 Zeichen.",
+                "en": "Only uppercase letters, digits, _ and - allowed. 2–6 characters."
+              }
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "isoRole",
+          "renderAs": "select",
+          "title": {
+            "de": "ISO-19650-Rolle",
+            "en": "ISO 19650 role"
+          },
+          "description": {
+            "de": "Vertragliche Rolle der Organisation nach ISO 19650-2.",
+            "en": "Contractual role of the organisation per ISO 19650-2."
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "appointing-party",
+              "text": {
+                "de": "Auftraggeber (Appointing Party)",
+                "en": "Appointing Party"
+              }
+            },
+            {
+              "value": "lead-appointed-party",
+              "text": {
+                "de": "Generalplaner (Lead Appointed Party)",
+                "en": "Lead Appointed Party"
+              }
+            },
+            {
+              "value": "appointed-party",
+              "text": {
+                "de": "Fachplaner (Appointed Party)",
+                "en": "Appointed Party"
+              }
+            }
+          ]
+        },
+        {
+          "type": "tagbox",
+          "name": "disciplineIds",
+          "title": {
+            "de": "Disziplinen",
+            "en": "Disciplines"
+          },
+          "description": {
+            "de": "Gewerke, die das Team im Projekt abdeckt. Mehrfachauswahl möglich.",
+            "en": "Trades covered by this team. Multiple choices allowed."
+          }
+        },
+        {
+          "type": "text",
+          "name": "representativeEmail",
+          "inputType": "email",
+          "title": {
+            "de": "Ansprechpartner (E-Mail)",
+            "en": "Representative (email)"
+          },
+          "description": {
+            "de": "Optional: E-Mail des Haupt-Ansprechpartners im Team.",
+            "en": "Optional: email of the primary contact on the team."
+          }
+        }
+      ]
+    }
+  ]
+}

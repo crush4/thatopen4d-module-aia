@@ -1,0 +1,94 @@
+{
+  "title": {
+    "de": "Projektziele",
+    "en": "Project objectives"
+  },
+  "description": {
+    "de": "Messbare Projektziele nach dotBEP `objectives`. Jede Zeile beschreibt ein Ziel mit optionalen Mess-Kennzahlen und Zielwerten.",
+    "en": "Measurable project objectives per dotBEP `objectives`. Each row describes a goal with optional metric and target."
+  },
+  "showProgressBar": "off",
+  "completeText": {
+    "de": "Speichern",
+    "en": "Save"
+  },
+  "completedHtml": {
+    "de": "<h3>Projektziele gespeichert.</h3>",
+    "en": "<h3>Objectives saved.</h3>"
+  },
+  "pages": [
+    {
+      "name": "objectives",
+      "title": {
+        "de": "Ziele",
+        "en": "Objectives"
+      },
+      "elements": [
+        {
+          "type": "matrixdynamic",
+          "name": "objectives",
+          "title": {
+            "de": "Projektziele",
+            "en": "Project objectives"
+          },
+          "description": {
+            "de": "Je Zeile ein Ziel mit Titel, optionaler Beschreibung und optionaler Metrik.",
+            "en": "One objective per row with title, optional description and optional metric."
+          },
+          "columns": [
+            {
+              "name": "title",
+              "title": {
+                "de": "Titel",
+                "en": "Title"
+              },
+              "cellType": "text",
+              "isRequired": true
+            },
+            {
+              "name": "description",
+              "title": {
+                "de": "Beschreibung",
+                "en": "Description"
+              },
+              "cellType": "comment"
+            },
+            {
+              "name": "metric",
+              "title": {
+                "de": "Metrik",
+                "en": "Metric"
+              },
+              "cellType": "text",
+              "description": {
+                "de": "Mess-Kennzahl (z. B. 'CO₂-Emission', 'Clash-Anzahl').",
+                "en": "Measurement (e.g. 'CO₂ emissions', 'Clash count')."
+              }
+            },
+            {
+              "name": "target",
+              "title": {
+                "de": "Zielwert",
+                "en": "Target"
+              },
+              "cellType": "text",
+              "description": {
+                "de": "Zielwert inkl. Einheit (z. B. '< 100 kg CO₂/m²', '0 harte Clashes').",
+                "en": "Target including unit (e.g. '< 100 kg CO₂/m²', '0 hard clashes')."
+              }
+            }
+          ],
+          "rowCount": 0,
+          "addRowText": {
+            "de": "Ziel hinzufügen",
+            "en": "Add objective"
+          },
+          "emptyRowsText": {
+            "de": "Noch keine Ziele. Füge den ersten Eintrag hinzu.",
+            "en": "No objectives yet. Add the first entry."
+          }
+        }
+      ]
+    }
+  ]
+}

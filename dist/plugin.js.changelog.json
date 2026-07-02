@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "pluginId": "thatopen4d-aia",
+  "generatedAt": "2026-07-02T00:08:26.073Z",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "publishedAt": "2026-06-22T12:00:00.000Z",
+      "entries": [
+        {
+          "id": "initial-extract",
+          "type": "feature",
+          "title": "Initial Extract aus dem ThatOpen4D-Hauptrepo (v1.0.0)",
+          "body": "Erstes eigenständiges Release als Stage-1-Core-Plugin. Frueher unter\n`packages/module-aia/` im Hauptrepo, jetzt als externes Repo\n`crush4/thatopen4d-module-aia` versionierbar und unabhaengig\nrelease-faehig.\n\n**Funktionalitaet unveraendert.** Elf Survey-Kacheln (User-Profil,\nProjekt-Trade, Projekt-Profil, Teams, Phasen/Meilensteine, LOD/LOI,\nAnlage-Typen, Software, Ziele, BIM-Uses, TwinClass-LOIN),\nStammdaten-Verwaltung mit Auto-Vervollstaendigung, Rollen-basiertes\nEnable/Disable pro Kachel. Alle API-Calls laufen unveraendert ueber\n`@thatopen4d/api-clients/aia`.\n\n**Cross-Modul-Vertrag:** keiner. AIA ist ein reines Endkonsumenten-Panel\nohne Provider-Rolle.\n\n**Mindest-Host-Version** `^1.5.1` — braucht den neuen\n`@thatopen4d/plugin-sdk/shared`-Subpath fuer die Cross-Modul-Types\naus `@thatopen4d/shared/aia-types` und `@thatopen4d/shared/twin-types`.",
+          "audience": [
+            "developer"
+          ],
+          "breaking": false
+        }
+      ]
+    }
+  ]
+}

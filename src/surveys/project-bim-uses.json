@@ -1,0 +1,120 @@
+{
+  "title": {
+    "de": "BIM-Anwendungsfälle",
+    "en": "BIM uses"
+  },
+  "description": {
+    "de": "BIM-Uses nach dotBEP `bimUses`. Beispiele: Kollisionsprüfung, 4D-Simulation, Mengenermittlung. Verknüpft Use-Cases mit Software und Phasen.",
+    "en": "BIM uses per dotBEP `bimUses`. Examples: clash detection, 4D simulation, quantity takeoff. Links use cases to software and phases."
+  },
+  "showProgressBar": "off",
+  "completeText": {
+    "de": "Speichern",
+    "en": "Save"
+  },
+  "completedHtml": {
+    "de": "<h3>BIM-Uses gespeichert.</h3>",
+    "en": "<h3>BIM uses saved.</h3>"
+  },
+  "pages": [
+    {
+      "name": "bimUses",
+      "title": {
+        "de": "Anwendungsfälle",
+        "en": "Use cases"
+      },
+      "elements": [
+        {
+          "type": "matrixdynamic",
+          "name": "bimUses",
+          "title": {
+            "de": "BIM-Anwendungsfälle",
+            "en": "BIM use cases"
+          },
+          "description": {
+            "de": "Je Zeile ein Anwendungsfall mit Software und Phasen-Zuordnung.",
+            "en": "One use case per row with software and phase bindings."
+          },
+          "columns": [
+            {
+              "name": "name",
+              "title": {
+                "de": "Name",
+                "en": "Name"
+              },
+              "cellType": "text",
+              "isRequired": true
+            },
+            {
+              "name": "description",
+              "title": {
+                "de": "Beschreibung",
+                "en": "Description"
+              },
+              "cellType": "comment"
+            },
+            {
+              "name": "softwareIds",
+              "title": {
+                "de": "Software",
+                "en": "Software"
+              },
+              "cellType": "tagbox"
+            },
+            {
+              "name": "phaseIds",
+              "title": {
+                "de": "Phasen",
+                "en": "Phases"
+              },
+              "cellType": "tagbox",
+              "choices": [
+                {
+                  "value": "pre-project",
+                  "text": { "de": "Bedarfsplanung", "en": "Pre-project" }
+                },
+                {
+                  "value": "conceptual",
+                  "text": { "de": "Konzept", "en": "Conceptual" }
+                },
+                {
+                  "value": "schematic",
+                  "text": { "de": "Vorplanung", "en": "Schematic" }
+                },
+                {
+                  "value": "design-development",
+                  "text": { "de": "Entwurf", "en": "Design Development" }
+                },
+                {
+                  "value": "construction-documentation",
+                  "text": { "de": "Ausführungsplanung", "en": "Construction Documentation" }
+                },
+                {
+                  "value": "construction",
+                  "text": { "de": "Ausführung", "en": "Construction" }
+                },
+                {
+                  "value": "handover",
+                  "text": { "de": "Übergabe", "en": "Handover" }
+                },
+                {
+                  "value": "operation",
+                  "text": { "de": "Betrieb", "en": "Operation" }
+                }
+              ]
+            }
+          ],
+          "rowCount": 0,
+          "addRowText": {
+            "de": "Anwendungsfall hinzufügen",
+            "en": "Add use case"
+          },
+          "emptyRowsText": {
+            "de": "Noch keine BIM-Uses. Füge den ersten Eintrag hinzu.",
+            "en": "No BIM uses yet. Add the first entry."
+          }
+        }
+      ]
+    }
+  ]
+}

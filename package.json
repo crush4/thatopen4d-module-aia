@@ -1,0 +1,74 @@
+{
+  "name": "@thatopen4d/module-aia",
+  "version": "1.0.0",
+  "private": false,
+  "description": "ThatOpen4D Stage-1-Plugin: AIA — Auftraggeber-Informations-Anforderungen mit Survey-basierten Kacheln fuer Stammdaten, Projekt-Profile, Leistungen und Standards.",
+  "type": "module",
+  "thatopen4d": {
+    "id": "thatopen4d-aia",
+    "displayName": "AIA",
+    "version": "1.0.0",
+    "engines": {
+      "host": "^1.5.1"
+    },
+    "contributes": {
+      "panels": [
+        {
+          "panelId": "aia",
+          "title": "AIA",
+          "icon": "mdi:clipboard-list-outline"
+        }
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/plugin.js",
+      "default": "./dist/plugin.js"
+    },
+    "./plugin": "./dist/plugin.js",
+    "./plugin.js.manifest.json": "./dist/plugin.js.manifest.json",
+    "./plugin.js.changelog.json": "./dist/plugin.js.changelog.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crush4/thatopen4d-module-aia.git"
+  },
+  "scripts": {
+    "build": "vite build && node scripts/write-manifest.mjs && node scripts/write-changelog.mjs",
+    "typecheck": "tsc --noEmit",
+    "dev": "thatopen4d-dev --target http://localhost:4178 --port 5177"
+  },
+  "peerDependencies": {
+    "@thatopen/components": "~3.4.2",
+    "@thatopen/components-front": "~3.4.2",
+    "@thatopen/fragments": "~3.4.3",
+    "@thatopen4d/api-clients": "*",
+    "@thatopen4d/plugin-sdk": "*",
+    "react": "^19.2.4",
+    "survey-core": "^2.5.20",
+    "survey-react-ui": "^2.5.20"
+  },
+  "peerDependenciesMeta": {
+    "@thatopen4d/api-clients": {
+      "optional": true
+    },
+    "@thatopen4d/plugin-sdk": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@thatopen4d/dev-host": "file:../ThatOpen4D/packages/dev-host-cli",
+    "@types/react": "^19.2.14",
+    "@vitejs/plugin-react": "^4",
+    "survey-core": "^2.5.20",
+    "survey-react-ui": "^2.5.20",
+    "typescript": "5.9.3",
+    "vite": "^7",
+    "vite-plugin-css-injected-by-js": "^5.0.1"
+  }
+}

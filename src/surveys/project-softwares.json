@@ -1,0 +1,67 @@
+{
+  "title": {
+    "de": "Software hinzufügen",
+    "en": "Add software"
+  },
+  "description": {
+    "de": "Autoren- oder Review-Software, die im Projekt zum Einsatz kommt (dotBEP `software`). Beispiele: Revit 2025, Navisworks, Solibri.",
+    "en": "Authoring or review software used on the project (dotBEP `software`). Examples: Revit 2025, Navisworks, Solibri."
+  },
+  "showProgressBar": "off",
+  "completeText": {
+    "de": "Software anlegen",
+    "en": "Create software"
+  },
+  "completedHtml": {
+    "de": "<h3>Software angelegt.</h3>",
+    "en": "<h3>Software created.</h3>"
+  },
+  "pages": [
+    {
+      "name": "software",
+      "title": {
+        "de": "Software",
+        "en": "Software"
+      },
+      "elements": [
+        {
+          "type": "text",
+          "name": "name",
+          "title": {
+            "de": "Name",
+            "en": "Name"
+          },
+          "description": {
+            "de": "Produktname der Software (z. B. 'Revit', 'Navisworks Manage').",
+            "en": "Software product name (e.g. 'Revit', 'Navisworks Manage')."
+          },
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "version",
+          "title": {
+            "de": "Version",
+            "en": "Version"
+          },
+          "description": {
+            "de": "Optional: Versions-String (z. B. '2025', 'v18.0').",
+            "en": "Optional: version string (e.g. '2025', 'v18.0')."
+          }
+        },
+        {
+          "type": "tagbox",
+          "name": "assetTypeIds",
+          "title": {
+            "de": "Erzeugte Asset-Types",
+            "en": "Produces asset types"
+          },
+          "description": {
+            "de": "Welche Deliverable-Typen produziert die Software? Mehrfachauswahl.",
+            "en": "Which deliverable types does this software produce? Multi-select."
+          }
+        }
+      ]
+    }
+  ]
+}

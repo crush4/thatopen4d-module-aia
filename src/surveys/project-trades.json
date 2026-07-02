@@ -1,0 +1,64 @@
+{
+  "title": {
+    "de": "Projekt-Gewerke",
+    "en": "Project Trades"
+  },
+  "description": {
+    "de": "Kuratiere die im Projekt aktiven Gewerke. Nach dem Sperren können Nutzer keine neuen Gewerke mehr anlegen — sie müssen aus dieser Liste wählen.",
+    "en": "Curate the trades active in this project. Once locked, users can only choose from this list — no free-text additions."
+  },
+  "showProgressBar": "off",
+  "completeText": {
+    "de": "Speichern",
+    "en": "Save"
+  },
+  "completedHtml": {
+    "de": "<h3>Projekt-Gewerke gespeichert.</h3>",
+    "en": "<h3>Project trades saved.</h3>"
+  },
+  "pages": [
+    {
+      "name": "trades",
+      "title": {
+        "de": "Kuratierte Gewerke",
+        "en": "Curated Trades"
+      },
+      "elements": [
+        {
+          "type": "tagbox",
+          "name": "allowedTrades",
+          "title": {
+            "de": "Im Projekt aktive Gewerke",
+            "en": "Active trades in this project"
+          },
+          "description": {
+            "de": "Mehrfachauswahl — alle Gewerke, die in diesem Projekt vorkommen.",
+            "en": "Multiple choices allowed — all trades present in this project."
+          },
+          "isRequired": true
+        },
+        {
+          "type": "boolean",
+          "name": "locked",
+          "title": {
+            "de": "Liste sperren",
+            "en": "Lock list"
+          },
+          "description": {
+            "de": "Wenn aktiviert, können Nutzer im eigenen Profil nur noch aus dieser Liste wählen — das Feld 'Anderes Gewerk …' wird ausgeblendet.",
+            "en": "If enabled, users can only pick from this list in their own profile — the 'Other trade …' field is hidden."
+          },
+          "defaultValue": false,
+          "labelTrue": {
+            "de": "Ja — Liste ist verbindlich",
+            "en": "Yes — list is binding"
+          },
+          "labelFalse": {
+            "de": "Nein — Nutzer dürfen weitere hinzufügen",
+            "en": "No — users may add more"
+          }
+        }
+      ]
+    }
+  ]
+}

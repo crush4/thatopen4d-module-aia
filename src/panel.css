@@ -1,0 +1,142 @@
+/* ─────────────────────────────────────────────────────────────────────────
+ * AIA-Panel — statische Styles.
+ *
+ * Enthält die Layout- und Farbklassen für Hub, Landing, Kacheln und Badges.
+ * Dynamisch berechnete Styles (grid-area, prop-abhängige Farben, Flex-
+ * Varianten mit Props-Durchreichung) bleiben als inline-style in panel.tsx.
+ * ─────────────────────────────────────────────────────────────────────── */
+
+/* Empty + Error ---------------------------------------------------------- */
+.aia-empty-state {
+  padding: 2rem;
+  text-align: center;
+  color: var(--bim-ui_bg-contrast-60);
+  font-size: 0.85rem;
+}
+
+.aia-error-state {
+  padding: 1rem;
+  color: var(--bim-ui_accent-red, #e74c3c);
+  font-size: 0.82rem;
+}
+
+/* Landing + dl/dt/dd ----------------------------------------------------- */
+.aia-landing-wrapper {
+  padding: 1.5rem 1.25rem;
+  color: var(--bim-ui_bg-contrast-80);
+}
+
+.aia-landing-heading {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--bim-ui_bg-contrast-100, #fff);
+}
+
+.aia-landing-dl {
+  display: grid;
+  grid-template-columns: minmax(120px, auto) 1fr;
+  column-gap: 1rem;
+  row-gap: 0.6rem;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.aia-landing-dl--compact {
+  font-size: 0.78rem;
+}
+
+.aia-landing-dt {
+  font-weight: 500;
+  color: var(--bim-ui_bg-contrast-60);
+}
+
+.aia-landing-dd {
+  margin: 0;
+  color: var(--bim-ui_bg-contrast-80);
+}
+
+.aia-landing-dd--compact {
+  font-size: 0.78rem;
+}
+
+/* Hub-Raster + Kacheln --------------------------------------------------- */
+.aia-hub-wrapper {
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.aia-hub-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.aia-hub-section-title {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--bim-ui_bg-contrast-60);
+}
+
+.aia-hub-tile {
+  padding: 1rem 1.1rem;
+  background: var(--bim-ui_bg-contrast-5, rgba(255, 255, 255, 0.05));
+  border: 1px solid var(--bim-ui_bg-contrast-20);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.aia-hub-tile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.aia-hub-tile-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--bim-ui_bg-contrast-100, #fff);
+}
+
+.aia-hub-tile-desc {
+  font-size: 0.78rem;
+  color: var(--bim-ui_bg-contrast-60);
+  margin-bottom: 0.6rem;
+}
+
+/* Status-Badges ---------------------------------------------------------- */
+.aia-badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 99px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.aia-badge--success {
+  background: var(--bim-ui_accent-green, #27ae60);
+  color: #fff;
+}
+
+.aia-badge--neutral {
+  background: var(--bim-ui_bg-contrast-20);
+  color: var(--bim-ui_bg-contrast-80);
+}
+
+.aia-badge--warning {
+  background: var(--bim-ui_accent-orange, #e67e22);
+  color: #fff;
+}
+
+.aia-badge--locked {
+  background: var(--bim-ui_accent-red, #c0392b);
+  color: #fff;
+}

@@ -1,0 +1,121 @@
+{
+  "title": {
+    "de": "Nutzer-Profil",
+    "en": "User Profile"
+  },
+  "description": {
+    "de": "Damit wir Anforderungen passend zuordnen können, brauchen wir kurz dein Profil.",
+    "en": "So we can map requirements correctly, we need a quick profile."
+  },
+  "showProgressBar": "off",
+  "completeText": {
+    "de": "Speichern",
+    "en": "Save"
+  },
+  "completedHtml": {
+    "de": "<h3>Danke — dein Profil ist gespeichert.</h3>",
+    "en": "<h3>Thanks — your profile has been saved.</h3>"
+  },
+  "pages": [
+    {
+      "name": "profile",
+      "title": {
+        "de": "Dein Profil",
+        "en": "Your profile"
+      },
+      "elements": [
+        {
+          "type": "text",
+          "name": "displayName",
+          "title": {
+            "de": "Anzeigename",
+            "en": "Display name"
+          },
+          "description": {
+            "de": "Wird aus deinem Benutzerkonto vorausgefüllt — anpassbar.",
+            "en": "Prefilled from your account — editable."
+          },
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "email",
+          "title": {
+            "de": "E-Mail",
+            "en": "Email"
+          },
+          "inputType": "email",
+          "readOnly": true,
+          "description": {
+            "de": "Deine Login-E-Mail (kann hier nicht geändert werden).",
+            "en": "Your login email (read-only here)."
+          }
+        },
+        {
+          "type": "dropdown",
+          "name": "projectRole",
+          "renderAs": "select",
+          "title": {
+            "de": "Deine Projektrolle",
+            "en": "Your project role"
+          },
+          "isRequired": true,
+          "showOtherItem": true,
+          "otherText": {
+            "de": "Andere Rolle …",
+            "en": "Other role …"
+          },
+          "otherPlaceholder": {
+            "de": "Neue Rolle eingeben — wird in die Liste übernommen",
+            "en": "Enter new role — will be added to the list"
+          }
+        },
+        {
+          "type": "dropdown",
+          "name": "bimRole",
+          "renderAs": "select",
+          "title": {
+            "de": "Deine BIM-Rolle",
+            "en": "Your BIM role"
+          },
+          "description": {
+            "de": "Rolle in der BIM-Abwicklung (VDI 2552-10).",
+            "en": "Role in BIM delivery (VDI 2552-10)."
+          },
+          "isRequired": true,
+          "showOtherItem": true,
+          "otherText": {
+            "de": "Andere BIM-Rolle …",
+            "en": "Other BIM role …"
+          },
+          "otherPlaceholder": {
+            "de": "Neue BIM-Rolle eingeben — wird in die Liste übernommen",
+            "en": "Enter new BIM role — will be added to the list"
+          }
+        },
+        {
+          "type": "tagbox",
+          "name": "trade",
+          "title": {
+            "de": "Dein Gewerk",
+            "en": "Your trade"
+          },
+          "description": {
+            "de": "Mehrfachauswahl möglich — alle zutreffenden anhaken.",
+            "en": "Multiple choices allowed — select all that apply."
+          },
+          "isRequired": true,
+          "showOtherItem": true,
+          "otherText": {
+            "de": "Anderes Gewerk …",
+            "en": "Other trade …"
+          },
+          "otherPlaceholder": {
+            "de": "Neues Gewerk eingeben — wird in die Liste übernommen",
+            "en": "Enter new trade — will be added to the list"
+          }
+        }
+      ]
+    }
+  ]
+}
